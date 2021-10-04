@@ -143,7 +143,7 @@ li {
 }
 
 .bg--red {
-  background: #FF0000;
+  background: #CD052C;
 }
 
 .bg--gray {
@@ -214,7 +214,7 @@ li {
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  background: #FF0000;
+  background: #CD052C;
   color: #fff;
   width: 40px;
   height: 40px;
@@ -238,17 +238,11 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  background: #000;
+  background: #0a0a1b;
   z-index: 1;
+  padding: 13px 0;
 }
-.header + div, .header + section {
-  padding-top: 95px;
-}
-.header__outer:first-child {
-  border-bottom: 1px solid #A9A9A9;
-}
-.header__inner-body {
-  position: relative;
+.header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,9 +252,8 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 12px 0;
 }
-.header__inner-body-btn {
+.header__inner-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,54 +271,39 @@ li {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
 }
-.header__inner-body-btn:hover {
+.header__inner-btn:hover {
   opacity: 0.7;
 }
-.header__inner-body-btn img {
-  width: 13px;
+.header__inner-btn img {
+  width: 10px;
 }
-.header__inner-body .burgiBtn img {
-  width: 5px;
-}
-.header__inner-footer {
-  position: relative;
-  padding: 15px 0;
-}
-.header__inner-footer-title {
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 1;
-}
-.header__inner-footer-orderBtn {
-  position: absolute;
+.header__inner-ham {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
-  position: absolute;
-  right: 0;
-  top: 5px;
-  background: #FF0000;
-  padding: 5px 18px;
-  border-radius: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: all 0.2s ease-in-out 0s;
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
 }
-.header__inner-footer-orderBtn:hover {
+.header__inner-ham:hover {
   opacity: 0.7;
 }
-.header__inner-footer-orderBtn .countNumber__outer {
-  width: 17px;
-  height: 16px;
-  margin-right: 15px;
+.header__inner-orderBtn {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
 }
 
 .scrollContainer {
@@ -340,14 +318,13 @@ body.bg--red .scrollSection::before {
 }
 body.bg--red .fixedButton {
   background: #fff;
-  color: #FF0000;
+  color: #CD052C;
 }
 
 .scrollSection {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
 }
 .scrollSection:nth-child(even)::before {
   top: unset;
@@ -380,7 +357,7 @@ body.bg--red .fixedButton {
   padding: 130px 0 0 0;
 }
 .scrollSection__inner-title {
-  color: #000;
+  color: #fff;
   font-style: normal;
   font-weight: bold;
   font-size: 60px;
@@ -389,11 +366,15 @@ body.bg--red .fixedButton {
   margin-bottom: 25px;
   max-width: 800px;
 }
+.scrollSection__inner-image {
+  width: 100%;
+  margin-top: 50px;
+}
 .scrollSection__inner-image img {
-  max-height: 50vh;
+  width: 100%;
 }
 .scrollSection__inner-subtitle {
-  color: #000;
+  color: #fff;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -411,7 +392,7 @@ body.bg--red .fixedButton {
   font-size: 14px;
   line-height: 1;
   text-align: center;
-  background: #000;
+  background: #0a0a1b;
   border-radius: 5px;
   width: 200px;
   padding: 12px 0;
@@ -425,7 +406,7 @@ body.bg--red .fixedButton {
 .scrollSection__inner-button .buttonSvg {
   cursor: pointer;
   display: block;
-  color: #FF0000;
+  color: #CD052C;
   background: #fff;
   border-radius: 50%;
   width: 70px;
@@ -473,13 +454,13 @@ body.bg--red .fixedButton {
   text-align: center;
 }
 .scrollSection__inner-button .buttonSvg svg {
-  color: #FF0000;
+  color: #CD052C;
   width: 16px;
   height: auto;
 }
 .scrollSection__inner-para {
   padding: 100px 0;
-  color: "Roboto", san-serif;
+  color: #fff;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -496,14 +477,14 @@ body.bg--red .fixedButton {
   max-width: 810px;
 }
 .scrollSection__inner-column {
-  width: calc( 100%/3 - 70px );
+  width: calc(100% / 3 - 70px);
   margin: 0 35px;
 }
 .scrollSection__inner-column img {
   max-height: 650px;
 }
 .scrollSection__inner-column p {
-  color: #000;
+  color: #fff;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -635,7 +616,7 @@ body.bg--red .fixedButton {
 @media (max-width: 1340px) {
   .products__inner-column {
     position: relative;
-    width: calc(100%/3 - 50px);
+    width: calc(100% / 3 - 50px);
     margin: 0 25px;
   }
   .products__inner-column::after {
@@ -663,7 +644,7 @@ body.bg--red .fixedButton {
     margin: 0 -20px;
   }
   .products__inner-column {
-    width: calc(100%/3 - 40px);
+    width: calc(100% / 3 - 40px);
     margin: 0 20px;
   }
   .products__inner-column::after {
@@ -696,15 +677,15 @@ body.bg--red .fixedButton {
     height: unset;
   }
   .scrollSection__inner {
-    padding: 100px 0;
+    padding: 50px 0;
+  }
+  .scrollSection__inner-image {
+    margin-top: 30px;
   }
   .scrollSection__inner-title {
     font-size: 44px;
     line-height: 55px;
     margin-bottom: 15px;
-  }
-  .scrollSection__inner-image img {
-    max-height: 450px;
   }
   .scrollSection__inner-subtitle {
     font-size: 22px;
@@ -721,7 +702,7 @@ body.bg--red .fixedButton {
     margin: 0 -15px;
   }
   .scrollSection__inner-column {
-    width: calc( ( 100% - 230px ) / 2 - 30px );
+    width: calc((100% - 230px) / 2 - 30px);
     margin: 0 15px;
   }
   .scrollSection__inner-column:first-child {
@@ -825,17 +806,28 @@ body.bg--red .fixedButton {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     height: unset;
-  }
-  .scrollSection__inner {
-    padding: 100px 0;
+    overflow: hidden;
   }
   .scrollSection__inner-title {
     font-size: 34px;
     line-height: 45px;
     margin-bottom: 10px;
   }
+  .scrollSection__inner-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: calc(100% + 80px);
+    margin: 0 -40px;
+  }
   .scrollSection__inner-image img {
-    width: 100%;
+    width: 120%;
   }
   .scrollSection__inner-subtitle {
     font-size: 18px;
@@ -864,7 +856,7 @@ body.bg--red .fixedButton {
     margin: 0 -5px;
   }
   .scrollSection__inner-column {
-    width: calc( ( 100% - 120px ) / 2 - 10px );
+    width: calc((100% - 120px) / 2 - 10px);
     margin: 0 5px;
   }
   .scrollSection__inner-column:first-child {
@@ -930,16 +922,17 @@ body.bg--red .fixedButton {
             box-sizing: border-box;
     height: unset;
   }
-  .scrollSection__inner {
-    padding: 100px 0;
+  .scrollSection__inner-image {
+    width: calc(100% + 40px);
+    margin: 0 -20px;
+  }
+  .scrollSection__inner-image img {
+    width: 120%;
   }
   .scrollSection__inner-title {
     font-size: 34px;
     line-height: 45px;
     margin-bottom: 10px;
-  }
-  .scrollSection__inner-image img {
-    width: 100%;
   }
   .scrollSection__inner-subtitle {
     font-size: 18px;

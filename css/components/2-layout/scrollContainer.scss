@@ -1,176 +1,169 @@
-.scrollContainer{
-
-    padding: 50px 0 !important;
+.scrollContainer {
+  padding: 50px 0 !important;
 }
 body.bg--red {
-    .sliderOuter{
-        &::before{
-            display: none !important;
-        }
+  .sliderOuter {
+    &::before {
+      display: none !important;
     }
-    .scrollSection{
-        &::before{
-            display: none !important;
-        }
+  }
+  .scrollSection {
+    &::before {
+      display: none !important;
     }
-    .fixedButton{
-        background: $white;
-        color: $red;
-    }
+  }
+  .fixedButton {
+    background: $white;
+    color: $red;
+  }
 }
-.scrollSection{
-    position: relative;
-    box-sizing: border-box;
-    height: 100vh;
-
-    &:nth-child(even){
-        &::before{
-            top: unset;
-            bottom: 0;
-        }    
+.scrollSection {
+  position: relative;
+  box-sizing: border-box;
+  &:nth-child(even) {
+    &::before {
+      top: unset;
+      bottom: 0;
     }
-    &::before{
-        @include contentAbsolute;
-        top: 0;
-        left: 0;
-        height: 50%;
+  }
+  &::before {
+    @include contentAbsolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    background: #eeeeee;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 0 0 0;
+
+    &-title {
+      color: $white;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 60px;
+      text-align: center;
+      line-height: 70px;
+      margin-bottom: 25px;
+      max-width: 800px;
+    }
+    &-image {
+      width: 100%;
+      margin-top: 50px;
+      img {
         width: 100%;
-        background: #eeeeee;
+      }
     }
+    &-subtitle {
+      color: $white;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 25px;
+      line-height: 29px;
+      text-align: center;
+      max-width: 800px;
+    }
+    &-button {
+      .button {
+        cursor: pointer;
+        display: block;
+        color: $white;
+        font-size: $font_main;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        background: $black-1;
+        border-radius: 5px;
+        width: 200px;
+        padding: 12px 0;
+        @include transition;
 
-    &__inner{
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      .buttonSvg {
+        cursor: pointer;
+        display: block;
+        color: $red;
+        background: $white;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        background-color: $white;
+        @include transition;
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 130px 0 0 0 ;
 
-        &-title{
-            color: $black;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 60px;
-            text-align: center;
-            line-height: 70px;
-            margin-bottom: 25px;
-            max-width: 800px;
-        }
-        &-image{
-            img{
-                max-height: 50vh;
-            }
-        }
-        &-subtitle{
-            color: $black;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 25px;
-            line-height: 29px;
-            text-align: center;
-            max-width: 800px;
-        }
-        &-button{
-            .button{
-                cursor: pointer;
-                display: block;
-                color: $white;
-                font-size: $font_main;
-                font-style: normal;
-                font-weight: bold;
-                font-size: 14px;
-                line-height: 1;
-                text-align: center;
-                background: $black;
-                border-radius: 5px;
-                width: 200px;
-                padding: 12px 0;
-                @include transition;
-
-                &:hover{
-                    opacity: .7;
-                }
-            }
-            .buttonSvg{
-                cursor: pointer;
-                display: block;
-                color: $red;
-                background: $white;
-                border-radius: 50%;
-                width: 70px;
-                height: 70px;
-                background-color: $white;
-                @include transition;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                &:hover{
-                    color: $black;
-                }
-
-                &__outer{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                &__title{
-                    color: $white;
-                    margin-top: 20px;
-                    font-family: $font_main;
-                    font-style: normal;
-                    font-weight: bold;
-                    font-size: 28px;
-                    line-height: 1;
-                    text-align: center;
-
-                }
-
-                svg{
-                    color: $red;
-                    width: 16px;
-                    height: auto;
-                }
-            }
+        &:hover {
+          color: $black;
         }
 
-        &-para{
-            padding: 100px 0;
-            color: $font_main;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 28px;
-            line-height: 33px;
-            text-align: center;
-            max-width: 800px;
+        &__outer {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
 
-        &-row{
-            display: flex;
-            width: calc(100% + 70px);
-            margin: 0 -35px;
-            max-width: 810px;
+        &__title {
+          color: $white;
+          margin-top: 20px;
+          font-family: $font_main;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 1;
+          text-align: center;
         }
-        &-column{
-            width: calc( 100%/3 - 70px );
-            margin: 0 35px;
 
-            img{
-                max-height: 650px;
-            }
-            p{
-                color: $black;
-                font-style: normal;
-                font-weight: normal;
-                font-size: 24px;
-                line-height: 30px;
-
-
-
-            }
-
+        svg {
+          color: $red;
+          width: 16px;
+          height: auto;
         }
+      }
     }
-    
+
+    &-para {
+      padding: 100px 0;
+      color: $white;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 33px;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    &-row {
+      display: flex;
+      width: calc(100% + 70px);
+      margin: 0 -35px;
+      max-width: 810px;
+    }
+    &-column {
+      width: calc(100% / 3 - 70px);
+      margin: 0 35px;
+
+      img {
+        max-height: 650px;
+      }
+      p {
+        color: $white;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
 }
