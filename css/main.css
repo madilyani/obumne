@@ -321,27 +321,6 @@ body.bg--red .fixedButton {
   color: #CD052C;
 }
 
-.sticky {
-  position: sticky;
-  top: 0;
-}
-.sticky__inner {
-  padding-top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .scrollSection {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -401,7 +380,7 @@ body.bg--red .fixedButton {
 }
 .scrollSection__inner-image img {
   max-height: 100%;
-  max-width: 100%;
+  max-width: 140%;
 }
 .scrollSection__inner-subtitle {
   color: #fff;
@@ -533,8 +512,8 @@ body.bg--red .fixedButton {
   border-radius: 15px;
   position: relative;
   position: sticky;
-  top: 100px;
-  height: 80vh;
+  top: 0;
+  height: calc(100vh - 100px);
   width: 100%;
   -webkit-transform-origin: center;
           transform-origin: center;
@@ -874,7 +853,7 @@ li {
   }
 
   .stack-cards__item {
-    height: 500px;
+    height: 400px;
     margin: 0 -20px;
     width: calc(100% + 40px);
     padding: 0 20px;

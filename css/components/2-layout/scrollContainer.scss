@@ -17,17 +17,17 @@ body.bg--red {
     color: $red;
   }
 }
-.sticky {
-  position: sticky;
-  top: 0;
-  &__inner {
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
+// .sticky {
+//   position: sticky;
+//   top: 0;
+//   &__inner {
+//     padding-top: 60px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
 .scrollSection {
   position: relative;
   box-sizing: border-box;
@@ -70,7 +70,7 @@ body.bg--red {
       justify-content: center;
       img {
         max-height: 100%;
-        max-width: 100%;
+        max-width: 140%;
       }
     }
     &-subtitle {
