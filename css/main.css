@@ -399,6 +399,10 @@ body.bg--red .fixedButton {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.scrollSection__inner-image img {
+  max-height: 100%;
+  max-width: 100%;
+}
 .scrollSection__inner-subtitle {
   color: #fff;
   font-style: normal;

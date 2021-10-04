@@ -68,6 +68,10 @@ body.bg--red {
       display: flex;
       align-items: center;
       justify-content: center;
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
     }
     &-subtitle {
       color: $white;
