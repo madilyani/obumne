@@ -235,7 +235,16 @@
       }
     }
   }
-
+  .stack-cards__item {
+    height: 500px;
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+    padding: 0 20px;
+    position: unset;
+    > * {
+      top: 0;
+    }
+  }
   .scrollSection {
     box-sizing: border-box;
     height: unset;
@@ -250,10 +259,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: calc(100% + 80px);
-        margin: 0 -40px;
         img {
-          width: 120%;
+          max-height: 100%;
+          max-width: 140%;
+          height: unset;
         }
       }
       &-subtitle {
@@ -366,13 +375,13 @@
     height: unset;
 
     &__inner {
-      &-image {
-        width: calc(100% + 40px);
-        margin: 0 -20px;
-        img {
-          width: 120%;
-        }
-      }
+      //   &-image {
+      //     width: calc(100% + 40px);
+      //     margin: 0 -20px;
+      //     img {
+      //       width: 120%;
+      //     }
+      //   }
       &-title {
         font-size: 34px;
         line-height: 45px;
