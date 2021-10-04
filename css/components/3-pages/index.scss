@@ -1,0 +1,129 @@
+.products{
+    &__inner{
+        padding: 50px 10px 100px 10px;
+        &-row{
+            display: flex;
+        }
+        &-column{
+            position: relative;
+            width: calc(100%/3 - 60px);
+            margin: 0 30px;
+
+            &::after{
+                @include contentAbsolute;
+                right: -30px;
+                bottom: 0;
+                height: calc(100% - 250px);
+                width: 1px;
+                background: $gray-1;
+            }
+
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.productDet{
+    
+    &__image{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: 40px; 
+        height: 210px;
+        img{ 
+            max-width: 100%; 
+            max-height: 100%; 
+        }
+    }
+    &__content{
+        padding-top: 10px;
+        
+        
+
+        &-title{
+            color: $black;
+            font-size: 20px;
+            line-height: 23px;
+            font-style: normal;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        &-para{
+            color: $black;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 40px;
+            height: 120px;
+            strong{
+                font-weight: 500;
+            }
+        }
+
+        &-price{
+            color: $black;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 35px;
+            margin-bottom: 60px;
+        }
+
+        &-button{
+            color: $white;
+            background: $black-2;
+            border-radius: 5px;
+            text-align: center;
+            font-family: $font_main;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 14px 0;
+            width: 230px;
+            margin-bottom: 30px;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+
+        &-list{
+            padding: 30px 0;
+
+        }
+
+        &-listItem{
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 20px;
+            &-logo{
+                margin-right: 10px;
+            }
+            &-content{
+                h5{
+                    color: $black;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                p{
+                    color: $black;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+    }
+}

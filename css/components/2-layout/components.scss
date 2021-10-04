@@ -1,0 +1,80 @@
+.bg--red{
+    background: $red;
+}
+.bg--gray{
+    background: #f7f7f7;
+}
+.countNumber{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: $black;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    color: $black;
+    font-family: $font_main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 6px;
+    line-height: 7px;
+    border-radius: 20px;
+    background: $gray;
+    transform: translate(40%, -20%);
+
+    &__outer{
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.slider{
+    &Outer{
+        padding: 50px 0;
+        position: relative;
+        
+        &::before{
+            @include contentAbsolute;
+            top: 0;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background: #eeeeee;
+        }
+    }
+    &__slide{
+        img{
+            width: 100%;
+
+        }
+    }
+}
+
+.fixedButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: $red;
+    color: $white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    bottom: 50px;
+    right: 50px;
+    @include transition;
+    svg{
+        width: 25%;
+        height: auto;
+    }
+
+    &:hover{
+        opacity: .6;
+    }
+}
