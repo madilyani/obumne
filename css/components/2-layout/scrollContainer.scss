@@ -17,6 +17,19 @@ body.bg--red {
     color: $red;
   }
 }
+// .sticky {
+//     background: $red;
+//   margin-top: 51px;
+//   position: sticky;
+//   top: 51px;
+//   &__inner {
+//     padding-top: 100px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
 .scrollSection {
   position: relative;
   box-sizing: border-box;
